@@ -32,6 +32,27 @@ public class SimpleTypes {
         isPaid = true;
         System.out.println("Tax is paid ? " + isPaid);
 
+        String isPaidText = isPaid ? "Yes" : "No";
+        System.out.println("Tax is paid ? " + isPaidText);
+
+        String name = "Leszek";
+        int index = 0;
+        // char oneLetter = 's';
+        char oneLetter = name.charAt(index);
+        System.out.println((index +1) + " character in the name " + name + " is " + oneLetter);
+
+        String prefix = "Le";
+        boolean isStartingWith = name.startsWith(prefix);
+        System.out.println("Does name " + name + " start with "+ prefix + "? : " + isStartingWith);
+        
+
+
+
+
+
+
+
+
 
     }
 }
