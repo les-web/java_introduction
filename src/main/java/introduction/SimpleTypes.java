@@ -46,6 +46,7 @@ public class SimpleTypes {
         boolean isStartingWith = name.startsWith(prefix);
         System.out.println("Does name " + name + " start with "+ prefix + "? : " + isStartingWith);
 
+        // Homework 2020-01-29
         /*
         Zadania dotyczące typów danych.
 
@@ -119,7 +120,7 @@ public class SimpleTypes {
         Wykonaj następujący kod:
 
         */
-
+/*
 
         public class App {
             public static void main(String[] args) {
@@ -130,6 +131,7 @@ public class SimpleTypes {
                Float floatValBoxed = 10.0F;
             }
         }
+  */
          /*
         Czy zostały zwrócone jakieś błędy?
         Poszukaj w internecie, dlaczego tak się dzieje.
