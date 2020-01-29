@@ -57,56 +57,56 @@ public class SimpleTypes {
         Następnie zwiększ wartości maksymalne o 1. Wartości minimalne zmniejsz o 1.
         Jakie są nowe wartości tych zmiennych?
         */
-        int varInt1, varInt2;
-        varInt1 = Integer.MIN_VALUE;
-        varInt2 = Integer.MAX_VALUE;
-        System.out.println(" int MIN VALUE = " + varInt1);
-        System.out.println(" int MAX VALUE = " + varInt2);
-        varInt1 = varInt1 - 1;
-        varInt2 = varInt2 + 1;
-        System.out.println(" int MIN VALUE - 1 = " + varInt1);
-        System.out.println(" int MAX VALUE + 1 = " + varInt2);
+        int intVar1, intVar2;
+        intVar1 = Integer.MIN_VALUE;
+        intVar2 = Integer.MAX_VALUE;
+        System.out.println(" int MIN VALUE = " + intVar1);
+        System.out.println(" int MAX VALUE = " + intVar2);
+        intVar1 = intVar1 - 1;
+        intVar2 = intVar2 + 1;
+        System.out.println(" int MIN VALUE - 1 = " + intVar1);
+        System.out.println(" int MAX VALUE + 1 = " + intVar2);
 
-        long varLong1, varLong2;
-        varLong1 = Long.MIN_VALUE;
-        varLong2 = Long.MAX_VALUE;
-        System.out.println(" long MIN VALUE = " + varLong1);
-        System.out.println(" long MAX VALUE = " + varLong2);
-        varLong1 = varLong1 - 1;
-        varLong2 = varLong2 + 1;
-        System.out.println(" long MIN VALUE - 1 = " + varLong1);
-        System.out.println(" long MAX VALUE + 1 = " + varLong2);
+        long longVar1, longVar2;
+        longVar1 = Long.MIN_VALUE;
+        longVar2 = Long.MAX_VALUE;
+        System.out.println(" long MIN VALUE = " + longVar1);
+        System.out.println(" long MAX VALUE = " + longVar2);
+        longVar1 = longVar1 - 1;
+        longVar2 = longVar2 + 1;
+        System.out.println(" long MIN VALUE - 1 = " + longVar1);
+        System.out.println(" long MAX VALUE + 1 = " + longVar2);
 
-        long varShort1, varShort2;
-        varShort1 = Short.MIN_VALUE;
-        varShort2 = Short.MAX_VALUE;
-        System.out.println(" short MIN VALUE = " + varShort1);
-        System.out.println(" short MAX VALUE = " + varShort2);
-        varShort1 = varShort1 - 1;
-        varShort2 = varShort2 + 1;
-        System.out.println(" short MIN VALUE - 1 = " + varShort1);
-        System.out.println(" short MAX VALUE + 1 = " + varShort2);
-        varShort1 = Short.MIN_VALUE - 1;
+        long shortVar1, shortVar2;
+        shortVar1 = Short.MIN_VALUE;
+        shortVar2 = Short.MAX_VALUE;
+        System.out.println(" short MIN VALUE = " + shortVar1);
+        System.out.println(" short MAX VALUE = " + shortVar2);
+        shortVar1 = shortVar1 - 1;
+        shortVar2 = shortVar2 + 1;
+        System.out.println(" short MIN VALUE - 1 = " + shortVar1);
+        System.out.println(" short MAX VALUE + 1 = " + shortVar2);
+        shortVar1 = Short.MIN_VALUE - 1;
 
-        float varFloat1, varFloat2;
-        varFloat1 = Float.MIN_VALUE;
-        varFloat2 = Float.MAX_VALUE;
-        System.out.println(" float MIN VALUE = " + varFloat1);
-        System.out.println(" float MAX VALUE = " + varFloat2);
-        varFloat1 = varFloat1 - 1;
-        varFloat2 = varFloat2 + 1;
-        System.out.println(" float MIN VALUE - 1 = " + varFloat1);
-        System.out.println(" float MAX VALUE + 1 = " + varFloat2);
+        float floatVar1, floatVar2;
+        floatVar1 = Float.MIN_VALUE;
+        floatVar2 = Float.MAX_VALUE;
+        System.out.println(" float MIN VALUE = " + floatVar1);
+        System.out.println(" float MAX VALUE = " + floatVar2);
+        floatVar1 = floatVar1 - 1;
+        floatVar2 = floatVar2 + 1;
+        System.out.println(" float MIN VALUE - 1 = " + floatVar1);
+        System.out.println(" float MAX VALUE + 1 = " + floatVar2);
 
-        double varDouble1, varDouble2;
-        varDouble1 = Double.MIN_VALUE;
-        varDouble2 = Float.MAX_VALUE;
-        System.out.println(" double MIN VALUE = " + varDouble1);
-        System.out.println(" double MAX VALUE = " + varDouble2);
-        varDouble1 = varDouble1 - 1;
-        varDouble2 = varDouble2 + 1;
-        System.out.println(" double MIN VALUE - 1 = " + varDouble1);
-        System.out.println(" double MAX VALUE + 1 = " + varDouble2);
+        double doubleVar1, doubleVar2;
+        doubleVar1 = Double.MIN_VALUE;
+        doubleVar2 = Float.MAX_VALUE;
+        System.out.println(" double MIN VALUE = " + doubleVar1);
+        System.out.println(" double MAX VALUE = " + doubleVar2);
+        doubleVar1 = doubleVar1 - 1;
+        doubleVar2 = doubleVar2 + 1;
+        System.out.println(" double MIN VALUE - 1 = " + doubleVar1);
+        System.out.println(" double MAX VALUE + 1 = " + doubleVar2);
 
 
 
