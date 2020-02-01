@@ -39,7 +39,7 @@ public class Strings {
         System.out.println("czy zawiera ALA " + duzyNapis.contains("ALA"));
 
         // czy "Ala ma kota" i "ALA MA KOTA" sa takie same equals equalsIgnoreCase
-        
+
 
 
 
