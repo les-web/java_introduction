@@ -15,7 +15,7 @@ public class CurrencyConverter {
         scanner.nextLine();
         String currencySymbol = scanner.nextLine();
 
-        float multiplier = 0.0F;
+        float multiplier = 1.0F;
         switch (currencySymbol) {
 
             case "EUR":
