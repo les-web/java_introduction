@@ -77,16 +77,15 @@ public class SimpleTypes {
         System.out.println(" long MIN VALUE - 1 = " + longVar1);
         System.out.println(" long MAX VALUE + 1 = " + longVar2);
 
-        long shortVar1, shortVar2;
+        short shortVar1, shortVar2;
         shortVar1 = Short.MIN_VALUE;
         shortVar2 = Short.MAX_VALUE;
         System.out.println(" short MIN VALUE = " + shortVar1);
         System.out.println(" short MAX VALUE = " + shortVar2);
-        shortVar1 = shortVar1 - 1;
-        shortVar2 = shortVar2 + 1;
+        shortVar1 = (short) (shortVar1 - 1);
+        shortVar2 = (short) (shortVar2 + 1);
         System.out.println(" short MIN VALUE - 1 = " + shortVar1);
         System.out.println(" short MAX VALUE + 1 = " + shortVar2);
-        shortVar1 = Short.MIN_VALUE - 1;
 
         float floatVar1, floatVar2;
         floatVar1 = Float.MIN_VALUE;
