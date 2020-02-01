@@ -82,7 +82,7 @@ public class SimpleTypes {
         shortVar2 = Short.MAX_VALUE;
         System.out.println(" short MIN VALUE = " + shortVar1);
         System.out.println(" short MAX VALUE = " + shortVar2);
-        shortVar1 = (short) (shortVar1 - 1);
+        shortVar1 = (short) (shortVar1 - 1); //attention with type short and integer
         shortVar2 = (short) (shortVar2 + 1);
         System.out.println(" short MIN VALUE - 1 = " + shortVar1);
         System.out.println(" short MAX VALUE + 1 = " + shortVar2);
