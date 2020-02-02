@@ -16,6 +16,7 @@ public class Exercise2 {
                 "Stanisław",
                 "Bronisław",
                 "Wiercisław",
+                "Wendzisław",
                 "Kunegunda"
         } ;
         /* zad 1 wypisz imiona żeńskie
@@ -58,5 +59,18 @@ public class Exercise2 {
         }
         System.out.println("Najdłuższe imię to "+ names[longest]);
         System.out.println("Długość imienia w znakach: "+ longest);
+
+        int longestNamelength = 0;
+        for ( String name : names) {
+            if (longestNamelength < name.length()) {
+                longestNamelength = name.length();
+            }
+        }
+        System.out.println("Najdłuższe imiona mają po " + longestNamelength + " znaków, Są to :");
+        for (String name : names) {
+            if ( longestNamelength == name.length()) {
+                System.out.println(name);
+            }
+        }
     }
 }
