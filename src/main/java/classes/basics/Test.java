@@ -4,7 +4,7 @@ public class Test {
     public static void main(String[] args) {
         // inicjacja obiektu
         String nazwisko = "Kowalski";
-        User adam = new User("Adam", nazwisko, 45);
+        User adam = new User("Adam", nazwisko, 17);
 
 //        adam.name = "Adam";
 //        adam.lastname = "Kowalski";
@@ -23,7 +23,14 @@ public class Test {
         User cloneJozek = new User(jozek);
         cloneJozek.introduce();
         cloneJozek.name = "Robert";
+        cloneJozek.age = 20;
         cloneJozek.introduce();
+
+        // User.minAge =40;
+        System.out.println("---------- Test wieku ---------");
+        System.out.println("Czy Adam jest dorosły? " + adam.isAdult());
+        System.out.println("Czy Jozek jest dorosły? " + jozek.isAdult());
+        System.out.println("Czy Robert jest dorosły? " + cloneJozek.isAdult());
 
     }
 }
