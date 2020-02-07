@@ -146,4 +146,43 @@ do zadania poprzedniego, szachownicę obrysować ramką (kody ASCII znaków to 2
     }
     // end of public static void drawChessBoardWithFrame (int n)
 
+    public static void drawChessBoard4 (int n) {
+      /*
+      Szachownica z polami 2x2
+Napisać metodę rysujSzachwnice2, która dla zadanej liczby n narysuje szachownicę n * n, przy czym każde pole składa się z czterech znaków. Np, dla n=4 (tu przyjęto, że ciemne pole to #, a jasne *
+
+**##**##
+**##**##
+##**##**
+##**##**
+**##**##
+**##**##
+##**##**
+##**##**
+       */
+
+        String white = "**";
+        String black = "##";
+        boolean isWhite = true;
+
+        for (int i = 1; i <=n ; i++) {          // n lines
+            for (int repeat = 0; repeat <=1 ; repeat++) {
+
+
+            for (int j = 1; j <= n ; j++) {     // n x fields  in the line
+                if (isWhite) {
+                    System.out.print(white);
+                } else {
+                    System.out.print(black);
+                }
+                isWhite = !isWhite;
+            }
+
+                System.out.println();
+            }
+            isWhite = !isWhite;                 // change color for start in the next line
+        }
+
+    }
+// end of public static void drawChessBoard2 (int n)
     }

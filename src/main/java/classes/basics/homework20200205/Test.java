@@ -1,9 +1,11 @@
 package classes.basics.homework20200205;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
+
 
         Scanner scanner = new Scanner(System.in);  // uruchamiamy wczytywanie danych
         System.out.println(" ------------ Triangle drawing with char * ---------------------");
@@ -23,6 +25,9 @@ public class Test {
         System.out.println(" ------------ Framed Chessboard drawing  ---------------------");
         TriangleDraw.drawChessBoardWithFrame (n);
 
+
+        System.out.println(" ------------ Chessboard x 4 drawing  ---------------------");
+        TriangleDraw.drawChessBoard4 (n);
 
     }
 }
