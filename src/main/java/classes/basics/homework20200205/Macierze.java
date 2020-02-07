@@ -18,7 +18,7 @@ public class Macierze {
         int n2 = 0;
         int m2 = 0;
         System.out.println("--------------------- Działania na macierzach ------------------------");
-        System.out.println(" Podaj rozmiary wszystkich macierzy <n * m>");
+        System.out.println(" Podaj rozmiary macierzy [ilość wierszy , ilość kolumn]");
         System.out.println(" Podaj ilość wierszy pierwszej macierzy ");
         Scanner scanner = new Scanner(System.in);  // uruchamiamy wczytywanie danych
 
@@ -95,9 +95,13 @@ public class Macierze {
 
         // dzielenie
         System.out.println(" Wynik dzielenia ");
+// dla dokładności wyniki otrzymujemy jako double
 
         double [][] wynik2 = MacierzeOperacje.divideMatrixInt(aInt, bInt);
         MacierzeOperacje.printMatrixDouble (wynik2);
+
+        System.out.println("--------------------- Koniec działania na macierzach ------------------------");
+
     }
 
 
