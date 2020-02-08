@@ -1,6 +1,6 @@
 package inheritance.animal;
 
-public class Animal {
+public abstract class Animal {
     private String name;
     private int age;
 
@@ -9,9 +9,10 @@ public class Animal {
         this.age = age;
     }
 
-    public void voice() {
-        System.out.println("Animal " + name + " gives voice !");
-    }
+//    public void voice() {
+//        System.out.println("Animal " + name + " gives voice !");
+//    }
+    public abstract void voice();
 
     public String getName() {
         return name;

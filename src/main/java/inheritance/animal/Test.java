@@ -3,10 +3,10 @@ package inheritance.animal;
 public class Test {
 
     public static void main(String[] args) {
-        Animal animal = new Animal("Zenek", 2);
+ //       Animal animal = new Animal("Zenek", 2); // dodaliśmy abstract przy definicji klasy
  //       animal.setName("Zenek");
  //       animal.setAge(2);
-        animal.voice();
+ //       animal.voice();
 
         Lion simba = new Lion("Simba",3);
  //       simba.setName("Simba");

@@ -11,6 +11,7 @@ public class Horse extends Animal {
 
     @Override
         public void voice (){
+   //     super.voice();       // możemy odwołać się do pierwotnej metody z klasy naczelnej
         System.out.println("Horse " + getName() +  " says yhahahah !!!!")  ;
 
     }
