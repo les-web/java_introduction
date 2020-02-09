@@ -19,10 +19,10 @@ Cwiczenia klasowe 20200209
 public class Exercise6 {
 
     public static void main(String[] args) {
-// 4. Wczytaj imię, nazwisko wiek, utwórz obiekty klasy user. Następnie wyświetl je
+
         Scanner scanner = new Scanner(System.in);  // uruchamiamy wczytywanie danych
         Userbirth users100[] = new Userbirth[100];
-        int nOfPersons =0;
+        int nOfPersons = 0;
         System.out.println(" ------------ Input the data for new Players  ---------------------");
         String input;
         String data[];
@@ -35,7 +35,7 @@ public class Exercise6 {
 
         String exitCode = "exit";
         do {
-            System.out.println(" Player " + (nOfPersons+1));
+            System.out.println(" Player " + (nOfPersons + 1));
             input = scanner.nextLine();
             if (input.startsWith(exitCode)) {
                 break;
@@ -44,10 +44,10 @@ public class Exercise6 {
                 name4 = data[0];
                 lastName4 = data[1];
                 dateOfBirth4 = data[2];
-                varDate = LocalDate.parse(dateOfBirth4,formatter);
+                varDate = LocalDate.parse(dateOfBirth4, formatter);
 
 
-                users100[nOfPersons] = new Userbirth(name4, lastName4,varDate);
+                users100[nOfPersons] = new Userbirth(name4, lastName4, varDate);
                 ++nOfPersons;
 
             }
@@ -57,15 +57,31 @@ public class Exercise6 {
 
         // print all players
         System.out.println("--------------- The Players ----------------------");
-        System.out.println("Number of Players equals :"+nOfPersons);
-        for ( int i = 0; i< nOfPersons; i++) {
+        System.out.println("Number of Players equals :" + nOfPersons);
+        for (int i = 0; i < nOfPersons; i++) {
             System.out.println(users100[i].toString());
 
         }
 
+//  6. Zmodyfikuj zadanie pierwsze - zamiast wieku wczytuj datę urodzenia. Wyświetl najstarszego i najmłodszego uzytkownika
+        int iOldest = 0;
+        int iYoungets =0;
+        LocalDate oldestBirth = users100[0].getDateOfBirth();
+        LocalDate iYoingest = users100[0].getDateOfBirth();
+        for (int i = 0; i < nOfPersons ; i++) {
+            if ( users100[i].getDateOfBirth().compareTo(oldestBirth) > 0) {
+                iOldest = i;
+                oldestBirth = users100[i].getDateOfBirth();
+            };
+            if (users100[i].getDateOfBirth().compareTo(iYoingest) < 0) {
+                iYoungets = i;
+                iYoingest = users100[i].getDateOfBirth();
+            }
+            i++;
 
-
-
+        }
+        System.out.println("Oldest is " + users100[iOldest].toString());
+        System.out.println("Youngets is " + users100[iYoungets].toString());
     }
 
 
