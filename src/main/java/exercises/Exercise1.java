@@ -1,5 +1,8 @@
 package exercises;
 
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 /*
@@ -125,6 +128,23 @@ public class Exercise1 {
             System.out.println(persons100[i].toString());
 
         }
+//        5. Wczytaj date urodzenia, podaj wiek
+
+        System.out.println("--------------- Age calculation for given birth date --------------------");
+        System.out.println("Give the birth date in the format YYYY/MM/DD :");
+
+
+        LocalDateTime currentTime = LocalDateTime.now();
+
+        String someDate = scanner.nextLine();
+        String format = "yyyy/MM/dd";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+        LocalDateTime someDateParsed = LocalDateTime.parse(someDate,formatter);
+        Period period = Period.between( someDateParsed.toLocalDate(), currentTime.toLocalDate());
+        int yearsBetweenTwoDates = period.getYears();
+        System.out.println("Age in years " + yearsBetweenTwoDates);
+
+
 
     }
 
