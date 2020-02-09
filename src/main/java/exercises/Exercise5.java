@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 
 public class Exercise5 {
+// 5. Wczytaj date urodzenia, podaj wiek
 
     public static void main(String[] args) {
 
