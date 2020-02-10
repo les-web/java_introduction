@@ -25,8 +25,8 @@ public class Exercise6 {
         System.out.println(" --------------- Format: aaaaaa bbbbbbb YYYY/MM/DD  <enter>-------------");
         System.out.println(" --------------- To finish input: type in word exit <enter>-------------");
 
-        String input; // do wczytywania linijki z konsoli
-        String data[]; // do dzielenia linijki na poszczegolne elementy (name surname date of birth
+        String input;                           // do wczytywania linijki z konsoli
+        String data[];                          // do dzielenia linijki na poszczegolne elementy (name surname date of birth
         String name4;
         String lastName4;
         String dateOfBirth4;
@@ -34,7 +34,8 @@ public class Exercise6 {
         LocalDate varDate;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
 
-        String exitCode = "exit"; // takim lancuchem ma się zakończyć wczytywanie danych
+        String exitCode = "exit";               // takim lancuchem ma się zakończyć wczytywanie danych
+
    // wczytujemy linie z danymi z konsoli
         do {
             System.out.println(" Player " + (nOfPersons + 1));
@@ -49,7 +50,7 @@ public class Exercise6 {
                 varDate = LocalDate.parse(dateOfBirth4, formatter);
 
                 users100[nOfPersons] = new Userbirth(name4, lastName4, varDate); // nowy User idzie do tablicy
-                ++nOfPersons; // ustaw wskaznik do tablicy dla nastepnego elementu
+                ++nOfPersons;                   // ustaw wskaznik do tablicy dla nastepnego elementu
 
             }
         } while (input != exitCode);
@@ -61,28 +62,28 @@ public class Exercise6 {
 
 
         for (int i = 0; i < nOfPersons; i++) {
-            System.out.println(users100[i].toString());
+            System.out.println((i+1) + ") "+ users100[i].toString());
         }
         System.out.println("-------------   The Youngest and the Oldest Players --------------------");
 
 
-        int iOldest = 0;  // wskaznik do najstarszego
-        int iYoungest = 0; // wskaznik tablicy do najmlodszego
+        int iOldest = 0;                                      // wskaznik do najstarszego
+        int iYoungest = 0;                                    // wskaznik tablicy do najmlodszego
         LocalDate oldestBirth = users100[0].getDateOfBirth(); // zmienna typu data na najstarszego,inicjujemy pierwszym elementem
         LocalDate youngestBirth = users100[0].getDateOfBirth(); // zmienna typu data na najmlodszego, inicjujemy pierwszym elementem
-        LocalDate actualBirthDate; // zmienna typu data na kolejne elementy z tablicy
-        for (int i = 0; i < nOfPersons; i++) { // petla na tablice
+        LocalDate actualBirthDate;                             // zmienna typu data na kolejne elementy z tablicy
+        for (int i = 0; i < nOfPersons; i++) {               // petla na tablice
             actualBirthDate = users100[i].getDateOfBirth(); // zapamietujemy wiek aktualnego
-            if (actualBirthDate.isBefore(oldestBirth)) {  // jeśli aktualny jest starszy niz pamietany
+            if (actualBirthDate.isBefore(oldestBirth)) {     // jeśli aktualny jest starszy niz pamietany
                 iOldest = i;                                // zapamietaj jego miejsce w tabeli
                 oldestBirth = actualBirthDate;              // zapamietaj go
             }
-            ;
+
             if (actualBirthDate.isAfter(youngestBirth)) {   // czy aktualny jest młodszy od najmłodzego
                 iYoungest = i;                              // zapamiętaj jego miejsce w tabeli
-                youngestBirth = actualBirthDate;            //
+                youngestBirth = actualBirthDate;            // zapamietaj go
             }
-            ; // koniec petli na tablice
+                                                            // koniec petli na tablice
         }
         System.out.println("Oldest is     " + users100[iOldest].toString());
         System.out.println("Youngest is   " + users100[iYoungest].toString());
