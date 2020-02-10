@@ -24,8 +24,9 @@ public class Userbirth {
     }
 
     @Override
+    // poprawione na pieszo aby wyświetlać Player zamiast User
     public String toString() {
-        return "Userbirth{" +
+        return "Player {" +
                 "name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
