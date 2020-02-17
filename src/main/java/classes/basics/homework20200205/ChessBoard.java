@@ -17,13 +17,25 @@ public class ChessBoard {
     private static char whiteField = 'A';
     private static char blackField = 'B';
 
+//    @Override
+//    public String toString() {
+//        return "ChessBoard{" +
+//                "chessBoard=" + Arrays.toString(chessBoard[0]) +
+//                '}';
+//    }
     @Override
-    public String toString() {
-        return "ChessBoard{" +
-                "chessBoard=" + Arrays.toString(chessBoard) +
-                '}';
-    }
+public String toString() {
+    String output="";
+        for (int i = 0; i < chessBoard.length ; i++) {
+            for (int j = 0; j < chessBoard.length ; j++) {
+                output = output + chessBoard[i][j];
+            }
+            output = output + "K";
 
+        }
+        return output;
+
+}
     private static char[][] makeChessBoard(int n) {
         boolean isWhite = true;
         char[][] varTable;
@@ -59,8 +71,7 @@ public class ChessBoard {
         System.out.println("---------------------   Szachownica obiektowo   ---------------------------- ");
         System.out.println("Podaj ilość pól = ilości wierszy <n> gdzie n jest parzystą liczbą naturalną : ");
         int n = scanner.nextInt();
-        char myChessBoard[][] = new char[n][n];
-        myChessBoard = makeChessBoard(n);
+        char myChessBoard[][] = makeChessBoard(n);
         print(n);
         System.out.println(myChessBoard.toString());
     }
