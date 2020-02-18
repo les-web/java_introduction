@@ -17,17 +17,45 @@ public class ChessBoard {
     private static char whiteField = 'A';
     private static char blackField = 'B';
 
-//    @Override
+    public ChessBoard(char[][] chessBoard) {
+        this.chessBoard = chessBoard;
+    }
+
+    public char[][] getChessBoard() {
+        return chessBoard;
+    }
+
+    public static char getWhiteField() {
+        return whiteField;
+    }
+
+    public static char getBlackField() {
+        return blackField;
+    }
+
+    public void setChessBoard(char[][] chessBoard) {
+        this.chessBoard = chessBoard;
+    }
+
+    public static void setWhiteField(char whiteField) {
+        ChessBoard.whiteField = whiteField;
+    }
+
+    public static void setBlackField(char blackField) {
+        ChessBoard.blackField = blackField;
+    }
+
+    //    @Override
 //    public String toString() {
 //        return "ChessBoard{" +
 //                "chessBoard=" + Arrays.toString(chessBoard[0]) +
 //                '}';
 //    }
     @Override
-public String toString() {
-    String output="";
-        for (int i = 0; i < chessBoard.length ; i++) {
-            for (int j = 0; j < chessBoard.length ; j++) {
+    public String toString() {
+        String output = "";
+        for (int i = 0; i < chessBoard.length; i++) {
+            for (int j = 0; j < chessBoard.length; j++) {
                 output = output + chessBoard[i][j];
             }
             output = output + "K";
@@ -35,7 +63,8 @@ public String toString() {
         }
         return output;
 
-}
+    }
+
     private static char[][] makeChessBoard(int n) {
         boolean isWhite = true;
         char[][] varTable;
