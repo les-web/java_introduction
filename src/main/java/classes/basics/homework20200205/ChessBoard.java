@@ -4,7 +4,8 @@ package classes.basics.homework20200205;
 Szachownica obiektowo (+)
 Zaimplementować zadanie szachownica w postaci klasy ChessBoard,
  która przechowuje swoje pola szachownicy i umożliwia ustalenie dowolnego rozmiaru.
- Ma też metodę print(), która wyświetli tablicę na ekran. Jeśli ktoś chce wersję jeszcze trudniejszą -
+ Ma też metodę print(), która wyświetli tablicę na ekran.
+ Jeśli ktoś chce wersję jeszcze trudniejszą -
 zamiast metody print() nadpisać metodę toString(),
 która zwróci stringa zawierającego gotową do wyświetlenia reprezentację szachownicy.
  */
