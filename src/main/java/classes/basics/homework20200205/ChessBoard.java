@@ -46,6 +46,10 @@ public class ChessBoard {
         ChessBoard.blackField = blackField;
     }
 
+    public char getOneField(int n, int m) {
+        return this.chessBoard[n][m];
+    }
+
     //    @Override
 //    public String toString() {
 //        return "ChessBoard{" +
@@ -57,9 +61,10 @@ public class ChessBoard {
         String output = "";
         for (int i = 0; i < chessBoard.length; i++) {
             for (int j = 0; j < chessBoard.length; j++) {
-                output = output + chessBoard[i][j];
+//                output = output + chessBoard[i][j];
+                output = output + getOneField(i, j);
             }
-            output = output + "K";
+            output = output + System.lineSeparator();
 
         }
         return output;
@@ -101,9 +106,33 @@ public class ChessBoard {
         System.out.println("---------------------   Szachownica obiektowo   ---------------------------- ");
         System.out.println("Podaj ilość pól = ilości wierszy <n> gdzie n jest parzystą liczbą naturalną : ");
         int n = scanner.nextInt();
+        setBlackField('X');
+        setWhiteField('O');
         char myChessBoard[][] = makeChessBoard(n);
+        System.out.println("Drukuje z wykorzystaniem metody print(n)");
         print(n);
-        System.out.println(myChessBoard.toString());
+        System.out.println("Drukuje na pieszo");
+        for (int i = 0; i < myChessBoard.length; i++) {
+            for (int j = 0; j < myChessBoard.length; j++) {
+                System.out.print(myChessBoard[i][j]);
+
+            }
+            //          System.out.println();
+            System.out.print(System.lineSeparator());
+        }
+        System.out.println("Drukuje z jednego stringu");
+        String oneLine = myChessBoard.toString();
+        System.out.println(oneLine);
+        oneLine = "";
+        System.out.println("Drukuje znak po znaku z tablicy");
+        for (int i = 0; i < myChessBoard.length; i++) {
+            for (int j = 0; j < myChessBoard.length; j++) {
+                oneLine = oneLine + myChessBoard[i][j];
+            }
+            oneLine = oneLine + System.lineSeparator();
+
+        }
+        System.out.println(oneLine);
     }
 
 
