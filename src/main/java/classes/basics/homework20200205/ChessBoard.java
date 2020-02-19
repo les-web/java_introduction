@@ -133,6 +133,8 @@ public class ChessBoard {
 
         }
         System.out.println(oneLine);
+
+
     }
 
 
