@@ -14,12 +14,17 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ChessBoard {
-    private char chessBoard[][];
-    private static char whiteField = 'A';
-    private static char blackField = 'B';
 
+    // co klasa ma
+    private static char[][] chessBoard; // macierz n x n ze znakami szachownicy
+    private static char whiteField = 'W'; // znak dla pola białego
+    private static char blackField = 'B';  // znak dla pola czarnego
+
+    // metody klasy
+
+    // z automatu
     public ChessBoard(char[][] chessBoard) {
-        this.chessBoard = chessBoard;
+        ChessBoard.chessBoard = chessBoard;
     }
 
     public char[][] getChessBoard() {
@@ -35,7 +40,7 @@ public class ChessBoard {
     }
 
     public void setChessBoard(char[][] chessBoard) {
-        this.chessBoard = chessBoard;
+        ChessBoard.chessBoard = chessBoard;
     }
 
     public static void setWhiteField(char whiteField) {
@@ -46,9 +51,6 @@ public class ChessBoard {
         ChessBoard.blackField = blackField;
     }
 
-    public char getOneField(int n, int m) {
-        return this.chessBoard[n][m];
-    }
 
     //    @Override
 //    public String toString() {
@@ -56,31 +58,39 @@ public class ChessBoard {
 //                "chessBoard=" + Arrays.toString(chessBoard[0]) +
 //                '}';
 //    }
-    @Override
+
+    // metody dopisane
+
+
     public String toString() {
+        // zamienia całą tablicę na jeden ciąg znakow do drukowania
+        // niestety NIE DZIALA
+        // Dlaczego i co jest zle???
         String output = "";
         for (int i = 0; i < chessBoard.length; i++) {
             for (int j = 0; j < chessBoard.length; j++) {
-//                output = output + chessBoard[i][j];
-                output = output + getOneField(i, j);
+                output = output + chessBoard[i][j];
             }
             output = output + System.lineSeparator();
-
         }
         return output;
 
     }
 
     private static char[][] makeChessBoard(int n) {
+        //tworzy nową tablice z szachownicą i zwraca ją
+        //argument n określa ilość wierszy i kolumn n x n
         boolean isWhite = true;
+        char white = getWhiteField();
+        char black = getBlackField();
         char[][] varTable;
         varTable = new char[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (isWhite) {
-                    varTable[i][j] = whiteField;
+                    varTable[i][j] = white;
                 } else {
-                    varTable[i][j] = blackField;
+                    varTable[i][j] = black;
                 }
                 isWhite = !isWhite;
             }
@@ -89,11 +99,12 @@ public class ChessBoard {
         return varTable;
     }
 
-    private static void print(int n) {
+    public static void print(int n) {
+        // metoda do drukowania szachownicy o podanej w parametrze ilosci pol n x n
         char varTable[][] = new char[n][n];
         varTable = makeChessBoard(n);
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < varTable.length; i++) {
+            for (int j = 0; j < varTable.length; j++) {
                 System.out.print(varTable[i][j]);
             }
             System.out.println();
@@ -106,25 +117,29 @@ public class ChessBoard {
         System.out.println("---------------------   Szachownica obiektowo   ---------------------------- ");
         System.out.println("Podaj ilość pól = ilości wierszy <n> gdzie n jest parzystą liczbą naturalną : ");
         int n = scanner.nextInt();
-        setBlackField('X');
-        setWhiteField('O');
-        char myChessBoard[][] = makeChessBoard(n);
-        System.out.println("Drukuje z wykorzystaniem metody print(n)");
+
+        setBlackField('X');  // zmieniamy kolor pól szachownicy
+        setWhiteField('O');  // także zmieniamy kolor
+
+        char[][] myChessBoard = makeChessBoard(n);  // tworzymy nowa szachownicę
+
+        System.out.println("1. Drukuje z wykorzystaniem metody print");
         print(n);
-        System.out.println("Drukuje na pieszo");
+
+        System.out.println("2. Drukuje na pieszo - odwołując się do kolejnych pól tablicy");
         for (int i = 0; i < myChessBoard.length; i++) {
             for (int j = 0; j < myChessBoard.length; j++) {
                 System.out.print(myChessBoard[i][j]);
-
             }
-            //          System.out.println();
             System.out.print(System.lineSeparator());
         }
-        System.out.println("Drukuje z jednego stringu");
+
+        System.out.println("3. Drukuje z jednego stringu utworzonego przez metode toString");
         String oneLine = myChessBoard.toString();
         System.out.println(oneLine);
+
+        System.out.println("4. Drukuje znak po znaku z tablicy, najpierw tworzac jeden duzy String");
         oneLine = "";
-        System.out.println("Drukuje znak po znaku z tablicy");
         for (int i = 0; i < myChessBoard.length; i++) {
             for (int j = 0; j < myChessBoard.length; j++) {
                 oneLine = oneLine + myChessBoard[i][j];
@@ -133,6 +148,8 @@ public class ChessBoard {
 
         }
         System.out.println(oneLine);
+
+        System.out.println("-------- Koniec -----------");
 
 
     }
