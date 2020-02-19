@@ -1,8 +1,38 @@
 package classes.basics.exercise.homework20200219;
 /*
-skopiowane z
+#RomanToDecimal
+
+(source: https://github.com/TDD-Katas/roman-numerals#problem-description)
+
+###Problem description The Kata says you should write a function to convert from Roman Numerals to decimal numerals.
+ In order to keep the kata light, we will not check for valid Roman Numeral.
+
+Roman numerals, the numeral system of ancient Rome, uses combinations of letters from the Latin alphabet to signify values.
+ They are based on seven symbols:
+
+Symbol	Value
+I	1
+V	5
+X	10
+L	50
+C	100
+D	500
+M	1000
+Numbers are formed by combining symbols together and adding the values.
+Generally, symbols are placed in order of value, starting with the largest values.
+When smaller values precede larger values, the smaller values are subtracted from the larger values,
+and the result is added to the total.
+Example:
+
+Roman Number	Computation	Value	Comment
+MMVI	1000 + 1000 + 5 + 1	2006	only addition
+MCMXLIV	1000 + (1000 - 100) + (50 - 10) + (5 - 1)
+
+SOLUTION
+-----------
+copied (with pride) from:
 http://www.sourcecodeera.com/blogs/Samath/Convert-Roman-numerals-to-decimal-using-Java.aspx
-ite a program that converts a number entered in Roman numerals to decimal.
+Write a program that converts a number entered in Roman numerals to decimal.
 Your program should consist of a class, say, Roman. An object of type Roman should do the following:
 a. Store the number as a Roman numeral.
 b. Convert and store the number into decimal.
@@ -93,9 +123,9 @@ public class Roman {
     public static void printRoman (String romanNumeral){
         System.out.println ("The equivalent of the Roman numeral "+romanNumeral+" is "+decimalNum);
     }
-
+/*
     public static void printDecimal (int decimalNum){
         System.out.println ("Decimal Number stored is: " + decimalNum);
     }
-
+*/
 }
