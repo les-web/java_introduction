@@ -18,10 +18,15 @@ public class MyTests {
 
         };
         System.out.println(" Array 2d b [][], length =  " + b.length);
+        System.out.println(" Array 2d b [][], printed with toString(), length =  " + b.length);
         for (int i = 0; i < b.length; i++) {
             System.out.println(Arrays.toString(b[i]));
 
         }
+        System.out.println(" Array 2d b [][], printed with deepToString() length =  " + b.length);
+        System.out.println(Arrays.deepToString(b));
+
+
         // test is a 3d array
         int[][][] test = {
                 {
@@ -35,7 +40,7 @@ public class MyTests {
                 }
         };
         // for..each loop to iterate through elements of 3d array
-        System.out.println(" Array 3d test [][][], length = " + test.length);
+        System.out.println(" Array 3d test [][][], printed with toString(), length = " + test.length);
 
         for (int[][] array2D : test) {
             for (int[] array1D : array2D) {
@@ -46,10 +51,14 @@ public class MyTests {
 
             }
         }
+        System.out.println(" Array 3d test [][][], printed with deepToString(), length = " + test.length);
+        System.out.println(Arrays.deepToString(test));
+
         //      System.out.println(test[1][1][0]);
         Arrays.parallelSort(a);
         System.out.println(" Array 1d a [], sorted  ");
         System.out.println(Arrays.toString(a));
+
 
 
     }
