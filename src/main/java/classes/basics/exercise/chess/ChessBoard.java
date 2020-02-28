@@ -88,8 +88,8 @@ public class ChessBoard {
         System.out.println("---------------------   Szachownica obiektowo   ---------------------------- ");
         System.out.println("Podaj ilość pól = ilości wierszy <n> gdzie n jest parzystą liczbą naturalną : ");
         int n = scanner.nextInt();
-        setBlackField('X');  // zmieniamy kolor pól szachownicy
-        setWhiteField('O');  // także zmieniamy kolor
+        setBlackField('b');  // zmieniamy kolor pól szachownicy
+        setWhiteField('w');  // także zmieniamy kolor
         ChessBoard myChessBoard = makeChessBoard(n);  // tworzymy nowa szachownicę
         System.out.println("1. Drukuje z wykorzystaniem metody print");
         print(n);
